@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/static/style.css">
+<div class="container">
+<h2>User Profile</h2>
+
+<p><b>Name:</b> {{user[3]}} {{user[4]}}</p>
+<p><b>Email:</b> {{user[5]}}</p>
+<p><b>Address:</b> {{user[6]}}</p>
+
+<hr>
+
+<h3>Upload Limerick.txt</h3>
+<form action="/upload" method="post" enctype="multipart/form-data">
+<input type="file" name="file">
+<button type="submit">Upload File</button>
+</form>
+
+{% if wordcount %}
+<p class="wordcount">Word Count: {{wordcount}}</p>
+<a href="/download"><button>Download File</button></a>
+{% endif %}
+
+</div>
